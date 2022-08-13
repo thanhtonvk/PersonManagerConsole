@@ -16,7 +16,7 @@ namespace Project1.Presentation
         {
             this.idRealEsate = idRealEsate;
         }
-
+// thêm mới
         public void Add()
         {
             House House = new House();
@@ -27,7 +27,7 @@ namespace Project1.Presentation
             Console.ReadKey();
             Console.Clear();
         }
-
+// hiển thị ds
         public void Display()
         {
             List<House> Houses = _dal.GetAll().Where(x => x.Id == idRealEsate).ToList();
@@ -40,7 +40,7 @@ namespace Project1.Presentation
             Console.ReadKey();
           
         }
-
+// cập nhật
         public void Update()
         {
             List<House> Houses = _dal.GetAll();
@@ -69,7 +69,7 @@ namespace Project1.Presentation
                 Console.Clear();
             }
         }
-
+// xóa
         public void Delete()
         {
             List<House> Houses = _dal.GetAll();
@@ -96,7 +96,7 @@ namespace Project1.Presentation
                 Console.Clear();
             }
         }
-
+// menu
         public void HouseMenu()
         {
             while (true)

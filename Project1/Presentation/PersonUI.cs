@@ -10,6 +10,7 @@ namespace Project1.Presentation
     {
         private PersonDAL _dal = new PersonDAL();
 
+//them mới
         public void Add()
         {
             Person person = new Person();
@@ -20,11 +21,13 @@ namespace Project1.Presentation
             Console.Clear();
         }
 
+// hiển thị danh sáhc
         public void Display()
         {
             List<Person> persons = _dal.GetAll();
             Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}", "Name", "Email Address", "Password", "Roles");
-            Console.WriteLine("-----------------------------------------------------------------------------------------");
+            Console.WriteLine(
+                "-----------------------------------------------------------------------------------------");
             foreach (var person in persons)
             {
                 person.Display();
@@ -34,12 +37,14 @@ namespace Project1.Presentation
             Console.Clear();
         }
 
+// cập nhật danh sách
         public void Update()
         {
             List<Person> persons = _dal.GetAll();
             Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}", "Index", "Name", "Email Address", "Password",
                 "Roles");
-            Console.WriteLine("-----------------------------------------------------------------------------------------");
+            Console.WriteLine(
+                "-----------------------------------------------------------------------------------------");
             foreach (var person in persons)
             {
                 Console.Write("{0,-20}", persons.IndexOf(person));
@@ -65,12 +70,14 @@ namespace Project1.Presentation
             }
         }
 
+// xóa thông tin
         public void Delete()
         {
-            List<Person> persons =_dal.GetAll();
+            List<Person> persons = _dal.GetAll();
             Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}", "Index", "Name", "Email Address", "Password",
                 "Roles");
-            Console.WriteLine("-----------------------------------------------------------------------------------------");
+            Console.WriteLine(
+                "-----------------------------------------------------------------------------------------");
             foreach (var person in persons)
             {
                 Console.Write("{0,-20}", persons.IndexOf(person));
@@ -95,6 +102,7 @@ namespace Project1.Presentation
             }
         }
 
+// menu
         public void PersonMenu()
         {
             while (true)

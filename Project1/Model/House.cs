@@ -6,7 +6,8 @@ namespace Project1.Model
     public class House
     {
         private string id, bedRoom, bathRoom, yard;
-        public static string PATH = "House.txt";
+        public static string PATH = "House.txt"; //tên file lưu dữ liệu
+
         public House(string id, string bedRoom, string bathRoom, string yard)
         {
             this.id = id;
@@ -15,24 +16,25 @@ namespace Project1.Model
             this.yard = yard;
         }
 
-        public void Input()
+        public void Input() //nhập thông tin
         {
             Console.Write("Bedroom: ");
             bedRoom = Validation.InputString();
             Console.Write("Bathroom: ");
             bathRoom = Validation.InputString();
             Console.Write("Yard: ");
-            yard = Validation.InputString();     Console.Clear();
+            yard = Validation.InputString();
+            Console.Clear();
         }
 
         public void Display()
         {
-            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}", bedRoom, bathRoom, yard);
+            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}", bedRoom, bathRoom, yard); //hiển thị thông tin của 1 object
         }
 
         public override string ToString()
         {
-            return id + "#" + bedRoom + "#" + bathRoom + "#" + yard;
+            return id + "#" + bedRoom + "#" + bathRoom + "#" + yard; //trả về chuỗi, các thông tin cách nhau bởi dấu #
         }
 
         public House()

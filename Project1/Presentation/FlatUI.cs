@@ -16,7 +16,7 @@ namespace Project1.Presentation
         {
             this.idRealEsate = idRealEsate;
         }
-
+// thêm mới flat
         public void Add()
         {
             Flat Flat = new Flat();
@@ -27,7 +27,7 @@ namespace Project1.Presentation
             Console.ReadKey();
             Console.Clear();
         }
-
+// hiển thị danh sách
         public void Display()
         {
             List<Flat> Flats = _dal.GetAll().Where(x => x.Id == idRealEsate).ToList();
@@ -40,7 +40,7 @@ namespace Project1.Presentation
             Console.ReadKey();
           
         }
-
+// cập nhật
         public void Update()
         {
             List<Flat> Flats = _dal.GetAll();
@@ -69,7 +69,7 @@ namespace Project1.Presentation
                 Console.Clear();
             }
         }
-
+// xóa
         public void Delete()
         {
             List<Flat> Flats = _dal.GetAll();
@@ -96,7 +96,7 @@ namespace Project1.Presentation
                 Console.Clear();
             }
         }
-
+// menu chọn chức năng
         public void FlatMenu()
         {
             while (true)

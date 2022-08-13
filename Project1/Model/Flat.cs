@@ -3,12 +3,13 @@ using Project1.Utilites;
 
 namespace Project1.Model
 {
+    // chứa thông tin của Flat
     public class Flat
     {
         private string id;
         private int floorNumber;
 
-        public static string PATH = "Flat.txt";
+        public static string PATH = "Flat.txt";//tên file lưu dữ liệu
         public Flat()
         {
         }
@@ -19,7 +20,7 @@ namespace Project1.Model
             this.floorNumber = floorNumber;
         }
 
-        public void Input()
+        public void Input()//nhập thông tin
         {
            
             Console.Write("Floor number: ");
@@ -28,7 +29,7 @@ namespace Project1.Model
 
         public void Display()
         {
-            Console.WriteLine("{0,-20}", floorNumber);
+            Console.WriteLine("{0,-20}", floorNumber);//hiển thị thông tin của 1 object
         }
 
         public string Id
@@ -45,7 +46,7 @@ namespace Project1.Model
 
         public override string ToString()
         {
-            return id + "#" + floorNumber;
+            return id + "#" + floorNumber;//trả về chuỗi, các thông tin cách nhau bởi dấu #
         }
     }
 }

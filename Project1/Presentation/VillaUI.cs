@@ -17,6 +17,7 @@ namespace Project1.Presentation
             this.idRealEsate = idRealEsate;
         }
 
+// thêm mới
         public void Add()
         {
             Villa Villa = new Villa();
@@ -28,23 +29,25 @@ namespace Project1.Presentation
             Console.Clear();
         }
 
+// hiển thị danh  sách
         public void Display()
         {
             List<Villa> Villas = _dal.GetAll().Where(x => x.Id == idRealEsate).ToList();
-            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|", "Backyard","Pool","Garage","Number of Floor");
+            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|", "Backyard", "Pool", "Garage", "Number of Floor");
             foreach (var Villa in Villas)
             {
                 Villa.Display();
             }
 
             Console.ReadKey();
-          
         }
 
+// cập nhật thoog tin
         public void Update()
         {
             List<Villa> Villas = _dal.GetAll();
-            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}", "Index","Backyard","Pool","Garage","Number of Floor");
+            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}", "Index", "Backyard", "Pool", "Garage",
+                "Number of Floor");
             foreach (var Villa in Villas)
             {
                 Console.Write("{0,-20}|", Villas.IndexOf(Villa));
@@ -70,10 +73,12 @@ namespace Project1.Presentation
             }
         }
 
+// xóa thông tin
         public void Delete()
         {
             List<Villa> Villas = _dal.GetAll();
-            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}", "Index","Backyard","Pool","Garage","Number of Floor");
+            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}", "Index", "Backyard", "Pool", "Garage",
+                "Number of Floor");
             foreach (var Villa in Villas)
             {
                 Console.Write("{0,-20}|", Villas.IndexOf(Villa));
@@ -97,6 +102,7 @@ namespace Project1.Presentation
             }
         }
 
+// menu
         public void VillaMenu()
         {
             while (true)

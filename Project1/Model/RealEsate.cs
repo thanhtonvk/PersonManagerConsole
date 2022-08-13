@@ -5,6 +5,7 @@ using Project1.Utilites;
 
 namespace Project1.Model
 {
+    //Chứa thông tin của RealEsate
     public class RealEsate
     {
         public static string ID_REALESATE;
@@ -15,7 +16,7 @@ namespace Project1.Model
         private string categoryId, houseOwnershipCertificate;
         private int amountBedroomAndBathRoom;
         private string description;
-        public static string PATH = "RealEsate.txt";
+        public static string PATH = "RealEsate.txt"; //tên file lưu dữ liệu
 
         public RealEsate(string id, string name, int price, string categoryId, string houseOwnershipCertificate,
             int amountBedroomAndBathRoom, string description)
@@ -29,7 +30,7 @@ namespace Project1.Model
             this.description = description;
         }
 
-        public void Input()
+        public void Input() //nhập thông tin
         {
             id = new Random(1000).Next().ToString();
             Console.Write("Name: ");
@@ -66,7 +67,7 @@ namespace Project1.Model
         public void Display()
         {
             Console.WriteLine("{0,-30}|{1,-30}|{2,-30}|{3,-30}|{4,-30}", name, price, houseOwnershipCertificate,
-                amountBedroomAndBathRoom, description);
+                amountBedroomAndBathRoom, description); //hiển thị thông tin của 1 object
         }
 
         public RealEsate()
@@ -119,7 +120,7 @@ namespace Project1.Model
         {
             return id + "#" + name + "#" + price + "#" + categoryId + "#" + houseOwnershipCertificate + "#" +
                    amountBedroomAndBathRoom +
-                   "#" + description;
+                   "#" + description; //trả về chuỗi, các thông tin cách nhau bởi dấu #
         }
     }
 }

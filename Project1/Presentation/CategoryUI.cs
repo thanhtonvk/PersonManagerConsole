@@ -6,11 +6,12 @@ using Project1.Utilites;
 
 namespace Project1.Presentation
 {
+    // giao dien chuc nang
     public class CategoryUI
     {
         private CategoryDAL _dal = new CategoryDAL();
 
-        public void Add()
+        public void Add() //chức năng thêm
         {
             Category Category = new Category();
             Category.Input();
@@ -20,7 +21,7 @@ namespace Project1.Presentation
             Console.Clear();
         }
 
-        public void Display()
+        public void Display() //hiện thị danh sach thông tin
         {
             List<Category> Categorys = _dal.GetAll();
             Console.WriteLine("{0,-20}|{1,-20}", "ID", "Name");
@@ -35,7 +36,7 @@ namespace Project1.Presentation
             Console.Clear();
         }
 
-        public void Update()
+        public void Update() //cap nhat thogn tin
         {
             List<Category> Categorys = _dal.GetAll();
             Console.WriteLine("{0,-20}|{1,-20}|{2,-20}", "Index", "ID", "Name");
@@ -47,7 +48,9 @@ namespace Project1.Presentation
                 Category.Display();
             }
 
+//chon doi tuong can sua
             int choose = Validation.InputNumber();
+            // neu lon hon so luong thi loi
             if (choose >= Categorys.Count)
             {
                 Console.WriteLine("Choose incorrect");
@@ -57,6 +60,7 @@ namespace Project1.Presentation
 
             else
             {
+                //cap nhat thogn tin theo doi tuong vua chon
                 Category Category = Categorys[choose];
                 Category.Input();
                 _dal.Update(Category);
@@ -66,8 +70,10 @@ namespace Project1.Presentation
             }
         }
 
+        //xóa thông tin 
         public void Delete()
         {
+            //get toàn bộ danh sách
             List<Category> Categorys = _dal.GetAll();
             Console.WriteLine("{0,-20}|{1,-20}|{2,-20}", "Index", "ID", "Name");
             Console.WriteLine(
@@ -77,8 +83,10 @@ namespace Project1.Presentation
                 Console.Write("{0,-20}", Categorys.IndexOf(Category));
                 Category.Display();
             }
+            //chọn đối tượng cần xóa
 
             int choose = Validation.InputNumber();
+            //neu index lớn hơn độ dài của list báo lỗi
             if (choose >= Categorys.Count)
             {
                 Console.WriteLine("Choose incorrect");
@@ -88,7 +96,7 @@ namespace Project1.Presentation
 
             else
             {
-                
+                //xóa đối tượng
                 _dal.Delete(choose);
                 Console.WriteLine("Successfully");
                 Console.ReadKey();

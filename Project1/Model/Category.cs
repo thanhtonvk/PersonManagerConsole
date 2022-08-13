@@ -3,9 +3,11 @@ using Project1.Utilites;
 
 namespace Project1.Model
 {
+    //Chứa thông tin của category
     public class Category
     {
-        public static string PATH = "Category.txt";
+        
+        public static string PATH = "Category.txt"; //tên file lưu dữ liệu
 
 
         private string id, categoryName;
@@ -33,7 +35,7 @@ namespace Project1.Model
         }
 
 
-        public void Input()
+        public void Input() //nhập thông tin
         {
             id = new Random(1000).Next().ToString();
             Console.Write("Category Name: ");
@@ -41,14 +43,15 @@ namespace Project1.Model
             Console.Clear();
         }
 
+        
         public void Display()
         {
-            Console.WriteLine("{0,-20}|{1,-20}", id, categoryName);
+            Console.WriteLine("{0,-20}|{1,-20}", id, categoryName); //hiển thị thông tin của 1 object
         }
 
         public override string ToString()
         {
-            return id + "#" + categoryName;
+            return id + "#" + categoryName; //trả về chuỗi, các thông tin cách nhau bởi dấu #
         }
     }
 }

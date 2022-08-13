@@ -7,6 +7,7 @@ namespace Project1.Presentation
 {
     public class LoginUI
     {
+        //login
         public void LoginMenu()
         {
             while (true)
@@ -24,11 +25,13 @@ namespace Project1.Presentation
                 {
                     if (login == 1)
                     {
+                        //đăng nhập vào menu person
                         Console.Clear();
                         new PersonUI().PersonMenu();
                     }
                     else
                     {
+                        //đăng nhập vào menu manager
                         Console.Clear();
                         new ManagerUI().ManagerMenu();
                     }

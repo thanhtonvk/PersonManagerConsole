@@ -3,11 +3,12 @@ using Project1.Utilites;
 
 namespace Project1.Model
 {
+    //Lưu thông tin của đối tượng Villa
     public class Villa
     {
         private string id, backyard, pool, garage;
         private int numberOfFloor;
-        public static string PATH = "Villa.txt";
+        public static string PATH = "Villa.txt";//đường dẫn file
 
         public Villa(string id, string backyard, string pool, string garage, int numberOfFloor)
         {
@@ -22,6 +23,7 @@ namespace Project1.Model
         {
         }
 
+        //Nhập thông tin cho object
         public void Input()
         {
             Console.Write("Backyard: ");
@@ -37,12 +39,12 @@ namespace Project1.Model
 
         public void Display()
         {
-            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}", backyard, pool, garage, numberOfFloor);
+            Console.WriteLine("{0,-20}|{1,-20}|{2,-20}|{3,-20}", backyard, pool, garage, numberOfFloor);//hiển thị thông tin
         }
 
         public override string ToString()
         {
-            return id + "#" + backyard + "#" + pool + "#" + garage + "#" + numberOfFloor;
+            return id + "#" + backyard + "#" + pool + "#" + garage + "#" + numberOfFloor;//thông tin dạng chuỗi, cách nhau bởi dấu #
         }
 
         public string Id

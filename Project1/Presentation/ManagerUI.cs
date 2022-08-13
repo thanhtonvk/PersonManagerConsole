@@ -5,6 +5,7 @@ namespace Project1.Presentation
 {
     public class ManagerUI
     {
+        //menu manager
         public void ManagerMenu()
         {
             while (true)

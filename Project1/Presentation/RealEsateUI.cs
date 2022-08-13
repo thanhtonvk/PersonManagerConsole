@@ -10,6 +10,7 @@ namespace Project1.Presentation
     {
         private RealEsateDAL _dal = new RealEsateDAL();
 
+// thêm mới
         public void Add()
         {
             RealEsate realEsate = new RealEsate();
@@ -20,6 +21,7 @@ namespace Project1.Presentation
             Console.Clear();
         }
 
+// hiển thị
         public void Display()
         {
             List<RealEsate> realEsates = _dal.GetAll();
@@ -35,7 +37,7 @@ namespace Project1.Presentation
 
 
             //view more detail
-
+// hiển thị thông tin chi tiết 
             Console.Write("Choose view details: ");
             int choose = Validation.InputNumber();
             if (choose >= realEsates.Count)
@@ -66,6 +68,7 @@ namespace Project1.Presentation
             Console.Clear();
         }
 
+// menu quản lý chi tiết
         public void MenuDetails(String realEsateId)
         {
             while (true)
@@ -101,7 +104,7 @@ namespace Project1.Presentation
             }
         }
 
-
+//cap nhat
         public void Update()
         {
             List<RealEsate> realEsates = _dal.GetAll();
@@ -134,6 +137,7 @@ namespace Project1.Presentation
             }
         }
 
+// xóa thông tin
         public void Delete()
         {
             List<RealEsate> realEsates = _dal.GetAll();
@@ -157,7 +161,6 @@ namespace Project1.Presentation
 
             else
             {
-               
                 _dal.Delete(choose);
                 Console.WriteLine("Successfully");
                 Console.ReadKey();
@@ -165,6 +168,7 @@ namespace Project1.Presentation
             }
         }
 
+// menu
         public void RealEstaMenu()
         {
             while (true)
