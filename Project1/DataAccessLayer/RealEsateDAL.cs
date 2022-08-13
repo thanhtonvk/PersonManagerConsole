@@ -57,10 +57,10 @@ namespace Project1.DataAccessLayer
             }
         }
 
-        public void Update(RealEsate realEsate)
+        public void Update(int idx,RealEsate realEsate)
         {
             List<RealEsate> list = GetAll();//lấy về danh sách
-            int idx = list.FindIndex(x => x.Name == realEsate.Name);
+          
             list[idx] = realEsate;//cập nhật thông tin theo vị trí
             using (StreamWriter writer = new StreamWriter(RealEsate.PATH))//mở luồng ghì file
             {

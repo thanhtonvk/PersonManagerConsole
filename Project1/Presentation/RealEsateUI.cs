@@ -130,7 +130,7 @@ namespace Project1.Presentation
             {
                 RealEsate realEsate = realEsates[choose];
                 realEsate.Input();
-                _dal.Update(realEsate);
+                _dal.Update(choose, realEsate);
                 Console.WriteLine("Successfully");
                 Console.ReadKey();
                 Console.Clear();

@@ -60,10 +60,10 @@ namespace Project1.DataAccessLayer
             }
         }
 
-        public void Update(Category category)
+        public void Update(int idx, Category category)
         {
             List<Category> list = GetAll();//lấy về danh sách
-            int idx = list.FindIndex(x => x.Id == category.Id);
+          
             list[idx] = category;//cập nhật thông tin theo vị trí
             using (StreamWriter writer = new StreamWriter(Category.PATH))//mở luồng ghì file
             {

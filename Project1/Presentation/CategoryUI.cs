@@ -63,7 +63,7 @@ namespace Project1.Presentation
                 //cap nhat thogn tin theo doi tuong vua chon
                 Category Category = Categorys[choose];
                 Category.Input();
-                _dal.Update(Category);
+                _dal.Update(choose,Category);
                 Console.WriteLine("Successfully");
                 Console.ReadKey();
                 Console.Clear();
