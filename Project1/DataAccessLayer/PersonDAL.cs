@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Project1.DataAccessLayer.Service;
 using Project1.Model;
 
 namespace Project1.DataAccessLayer
 {//Giao tiếp với csdl cho chức năng thêm sửa xóa lấy về ds
-    public class PersonDAL
+    public class PersonDAL:IPerson
     {
         public List<Person> GetAll()//lấy về toàn bộ danh sách
         {
